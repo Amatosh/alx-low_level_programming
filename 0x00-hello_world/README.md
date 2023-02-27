@@ -1,1 +1,1 @@
-Here we begin learning C programming language.
+This is my first time learning and programming in c
