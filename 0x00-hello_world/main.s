@@ -1,8 +1,9 @@
 	.file	"main.c"
+	.intel_syntax noprefix
 	.text
 	.section	.rodata
 .LC0:
-	.string	"hello world"
+	.string	"Holberton School"
 	.text
 	.globl	main
 	.type	main, @function
@@ -10,15 +11,16 @@ main:
 .LFB0:
 	.cfi_startproc
 	endbr64
-	pushq	%rbp
+	push	rbp
 	.cfi_def_cfa_offset 16
 	.cfi_offset 6, -16
-	movq	%rsp, %rbp
+	mov	rbp, rsp
 	.cfi_def_cfa_register 6
-	leaq	.LC0(%rip), %rdi
-	call	puts@PLT
-	movl	$0, %eax
-	popq	%rbp
+	lea	rdi, .LC0[rip]
+	mov	eax, 0
+	call	printf@PLT
+	mov	eax, 0
+	pop	rbp
 	.cfi_def_cfa 7, 8
 	ret
 	.cfi_endproc
