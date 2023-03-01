@@ -1,10 +1,11 @@
 #include <stdio.h>
-/**this is a program that prints text to standard output
- * main prints text
- * Return 0
+/**
+ * main - Prints text
+ *
+ * Return Always 0 (Success)
  */
 int main(void)
 {
-	puts("\"Programming is like building a muiltilingual puzzle");
+	puts("\"Programming is like building a multilingual puzzle");
 	return (0);
 }
